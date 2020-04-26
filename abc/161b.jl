@@ -1,3 +1,3 @@
-n,m=[parse(Int,i) for i in split(readline())]
-a=[parse(Int,i) for i in split(readline())]
-print(count(i->(i>=sum(a)/4/m),a)>=m?"Yes":"No")
+n=parse(Int,readline())
+s=chomp(readline())
+print(count(x->x=="ABC",[s[i:i+2] for i in 1:n-2]))
