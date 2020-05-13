@@ -20,5 +20,5 @@ signed main () {
       ans=min(ans,sum_c);
     }
   }
-   cout<< ((ans==INT_MAX) ? -1 : ans);
+  cout<< ((ans==INT_MAX) ? -1 : ans);
 }
