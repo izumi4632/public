@@ -3,7 +3,7 @@ using namespace std;
 #define rep(i,n) for (int i=0; i < (int)(n); i++)
 #define fo(i,s,e) for (int i=(s); i < (e); i++)
 #define all(obj) (obj).begin(), (obj).end()
-/*卍卍卍 #define int long long 卍卍卍*/
+#define int long long
 //素数判定 https://qiita.com/EqualL2/items/b3c2530c458f8450d390
 bool is_prime(const unsigned n){
     switch(n){
@@ -27,7 +27,7 @@ bool is_prime(const unsigned n){
 }
 signed main () {
   int x;cin >> x;
-  for (int i = x; i <pow(10,5); i++){
+  for (int i = x; i <INT_MAX; i++){
     if(is_prime(i)){
       cout << i << endl;
       break;
