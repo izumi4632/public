@@ -1,1 +1,0 @@
-print("x"^length(chomp(readline())))
