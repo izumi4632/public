@@ -28,7 +28,8 @@ function bfs(g,f::Int)
 end
 function main()
   println("Yes")
-  foreach(println,(bfs(mkgraph(pM(split(readline()))...),1)[2][2:end]))
+  @show g=mkgraph(pM(split(readline()))...)
+  foreach(println,(bfs(g,1)[2][2:end]))
 end
 main()
 if isdefined(Base, :mystdin);close(mystdin);end

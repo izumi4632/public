@@ -2,34 +2,36 @@ if isfile("mystdin.txt");mystdin=open("mystdin.txt","r");redirect_stdin(mystdin)
 pI(x)=parse(Int,x)
 pM(x::Array{SubString{String},1})=map(pI,x)
 function mkgraph(n::Int,m::Int)
-  g=[Int[] for i=1:n]
+  g=Array{Int64,1}[Int[] for i=1:n]
   for i=1:m
     a,b=pM(split(readline()))
     push!(g[a],b); push!(g[b],a)
   end
   return g
 end
-function bfs(g,f,l)
+function bfs(g,f::Int)
   n=length(g)
-  seen=zeros(Int,n)
-  seen[f]=1
-  q=Int[]
-  dist=0
-  for i=g[f];seen[i]=1;end
-  for look=g[f]
-    seen[look]=1
-    for next=g[look]
-      if seen[next]!=0;continue;end
-      seen[next]=look
-      push!(q,next)
+  q=Int[f]
+  dist=zeros(Int,n)
+  goto=zeros(Int,n)
+  while !isempty(q)
+    v=splice!(q,1)
+    for nv=g[v]
+      if dist[nv]!=0; continue; end
+      dist[nv]=dist[v]+1
+      goto[nv]=v
+      push!(q,nv)
     end
   end
-  return q
+  dist[f]=0;goto[f]=0
+  return dist,goto
 end
 function main()
   n,m=pM(split(readline()))
   g=mkgraph(n,m)
-  for i=1:n; println(length(bfs(g,i,-1))); end
+  for i=1:n
+    println(count(x->x==2,bfs(g,i)[1]))
+  end
 end
 main()
 if isdefined(Base, :mystdin);close(mystdin);end

@@ -14,6 +14,7 @@ function bfs(g,f::Int)
   goto=zeros(Int,n)
   while !isempty(q)
     v=popfirst!(q);
+    #v=splice!(q,1)
     for nv=g[v];
       if dist[nv]!=0; continue; end
       dist[nv]=dist[v]+1
