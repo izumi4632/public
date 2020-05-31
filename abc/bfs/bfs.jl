@@ -26,6 +26,17 @@ function bfs(g,f::Int)
   return dist,goto
 end
 
+function mkmaze(h,w)
+  m=Array[]
+  for i=1:h
+    l=chomp(readline())
+    @show l
+    l=Bool[j=='.' for j=l]
+    push!(m,l)
+  end
+  return m
+end
+
 
 if isfile("mystdin.txt");mystdin=open("mystdin.txt","r");redirect_stdin(mystdin);end
 pI(x)=parse(Int,x)
