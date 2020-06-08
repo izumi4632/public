@@ -3,13 +3,14 @@ pI(x)=parse(Int,x)
 pM(x::Array{SubString{String},1})=map(pI,x)
 function main()
   n,m,x=pM(split(readline()))
-  a=pM(split(readline()))
-  ruiseki=zeros(m)
-  ruiseki[1]=a[1]
-  for i in 2:m
-    ruiseki[i]=ruiseki[i-1]+a[i]
+  a=zeros(Int,n)
+  for i=pM(split(readline()))
+    a[i]=1
   end
-  println(min(ruiseki[m]))
+  for i=2:n
+    a[i]=a[i-1]+a[i]
+  end
+  println(min(a[n]-a[x],a[x]))
 end
 main()
 if isdefined(Base, :mystdin);close(mystdin);end
