@@ -1,1 +1,6 @@
-100000
+3
+apple
+orange
+apple
+1
+grape
