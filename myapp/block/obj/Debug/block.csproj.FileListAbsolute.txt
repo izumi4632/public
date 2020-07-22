@@ -1,6 +1,0 @@
-C:\Users\izumi\Desktop\doc\public\myapp\block\obj\Debug\block.csprojAssemblyReference.cache
-C:\Users\izumi\Desktop\doc\public\myapp\block\obj\Debug\Breakout.Form1.resources
-C:\Users\izumi\Desktop\doc\public\myapp\block\obj\Debug\block.Properties.Resources.resources
-C:\Users\izumi\Desktop\doc\public\myapp\block\obj\Debug\block.csproj.GenerateResource.cache
-C:\Users\izumi\Desktop\doc\public\myapp\block\obj\Debug\block.csproj.CoreCompileInputs.cache
-C:\Users\izumi\Desktop\doc\public\myapp\block\obj\Debug\block.Form1.resources
