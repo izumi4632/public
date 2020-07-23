@@ -18,6 +18,7 @@ namespace Breakout
         int ballRadius;
         Rectangle paddlePos;
         Rectangle blockPos;
+        bool flag1;
 
         public Form1()
         {
@@ -28,6 +29,7 @@ namespace Breakout
             this.ballRadius = 10;
             this.paddlePos = new Rectangle(100, this.Height - 50, 100, 5);
             this.blockPos = new Rectangle(100, 50, 80, 25);
+            this.flag1 = true;
 
             Timer timer = new Timer();
             timer.Interval = 33;
@@ -103,13 +105,15 @@ namespace Breakout
 
             // ブロックとのあたり判定
             int collision = BlockVsCircle(blockPos, ballPos);
-            if (collision == 1 || collision == 2)
+            if (flag1 && (collision == 1 || collision == 2))
             {
                 ballSpeed.Y *= -1;
+                flag1 = false;
             }
-            else if (collision == 3 || collision == 4)
+            else if (flag1 && (collision == 3 || collision == 4))
             {
                 ballSpeed.X *= -1;
+                flag1 = false;
             }
 
             // 再描画
@@ -127,7 +131,11 @@ namespace Breakout
 
             e.Graphics.FillEllipse(pinkbrush, px, py, this.ballRadius * 2, this.ballRadius * 2);
             e.Graphics.FillRectangle(grayBrush, paddlePos);
-            e.Graphics.FillRectangle(blueBrush, blockPos);
+            if (flag1)
+            {
+                e.Graphics.FillRectangle(blueBrush, blockPos);
+            }
+         
         }
 
         private void KeyPressed(object sender, KeyPressEventArgs e)
