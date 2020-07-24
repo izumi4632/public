@@ -17,19 +17,35 @@ namespace Breakout
         Vector ballSpeed;
         int ballRadius;
         Rectangle paddlePos;
-        Rectangle blockPos;
-        bool flag1;
+        Rectangle blockPos1, blockPos2, blockPos3, blockPos4, blockPos5, blockPos6, blockPos7, blockPos8, blockPos9;
+        bool flag1, flag2, flag3, flag4, flag5, flag6, flag7, flag8, flag9;
 
         public Form1()
         {
             InitializeComponent();
 
-            this.ballPos = new Vector(200, 200);
+            this.ballPos = new Vector(200, 400);
             this.ballSpeed = new Vector(-2, 4);
             this.ballRadius = 10;
             this.paddlePos = new Rectangle(100, this.Height - 50, 100, 5);
-            this.blockPos = new Rectangle(100, 50, 80, 25);
+            this.blockPos1 = new Rectangle(5, 260, 150, 50);
             this.flag1 = true;
+            this.blockPos2 = new Rectangle(165, 260, 150, 50);
+            this.flag2 = true;
+            this.blockPos3 = new Rectangle(325, 260, 150, 50);
+            this.flag3 = true;
+            this.blockPos4 = new Rectangle(5, 140, 150, 50);
+            this.flag4 = true;
+            this.blockPos5 = new Rectangle(165, 140, 150, 50);
+            this.flag5 = true;
+            this.blockPos6 = new Rectangle(325, 140, 150, 50);
+            this.flag6 = true;
+            this.blockPos7 = new Rectangle(5, 200, 150, 50);
+            this.flag7 = true;
+            this.blockPos8 = new Rectangle(165, 200, 150, 50);
+            this.flag8 = true;
+            this.blockPos9 = new Rectangle(325, 200, 150, 50);
+            this.flag9 = true;
 
             Timer timer = new Timer();
             timer.Interval = 33;
@@ -104,7 +120,7 @@ namespace Breakout
             }
 
             // ブロックとのあたり判定
-            int collision = BlockVsCircle(blockPos, ballPos);
+            int collision = BlockVsCircle(blockPos1, ballPos);
             if (flag1 && (collision == 1 || collision == 2))
             {
                 ballSpeed.Y *= -1;
@@ -114,6 +130,94 @@ namespace Breakout
             {
                 ballSpeed.X *= -1;
                 flag1 = false;
+            }
+            int collision2 = BlockVsCircle(blockPos2, ballPos);
+            if (flag2 && (collision2 == 1 || collision2 == 2))
+            {
+                ballSpeed.Y *= -1;
+                flag2 = false;
+            }
+            else if (flag2 && (collision2 == 3 || collision2 == 4))
+            {
+                ballSpeed.X *= -1;
+                flag2 = false;
+            }
+            int collision3 = BlockVsCircle(blockPos3, ballPos);
+            if (flag3 && (collision3 == 1 || collision3 == 2))
+            {
+                ballSpeed.Y *= -1;
+                flag3 = false;
+            }
+            else if (flag3 && (collision3 == 3 || collision3 == 4))
+            {
+                ballSpeed.X *= -1;
+                flag3 = false;
+            }
+            int collision4 = BlockVsCircle(blockPos4, ballPos);
+            if (flag4 && (collision4 == 1 || collision4 == 2))
+            {
+                ballSpeed.Y *= -1;
+                flag4 = false;
+            }
+            else if (flag4 && (collision4 == 3 || collision4 == 4))
+            {
+                ballSpeed.X *= -1;
+                flag4 = false;
+            }
+            int collision5 = BlockVsCircle(blockPos5, ballPos);
+            if (flag5 && (collision5 == 1 || collision5 == 2))
+            {
+                ballSpeed.Y *= -1;
+                flag5 = false;
+            }
+            else if (flag5 && (collision5 == 3 || collision5 == 4))
+            {
+                ballSpeed.X *= -1;
+                flag5 = false;
+            }
+            int collision6 = BlockVsCircle(blockPos6, ballPos);
+            if (flag6 && (collision6 == 1 || collision6 == 2))
+            {
+                ballSpeed.Y *= -1;
+                flag6 = false;
+            }
+            else if (flag6 && (collision6 == 3 || collision6 == 4))
+            {
+                ballSpeed.X *= -1;
+                flag6 = false;
+            }
+            int collision7 = BlockVsCircle(blockPos7, ballPos);
+            if (flag7 && (collision7 == 1 || collision7 == 2))
+            {
+                ballSpeed.Y *= -1;
+                flag7 = false;
+            }
+            else if (flag7 && (collision7 == 3 || collision7 == 4))
+            {
+                ballSpeed.X *= -1;
+                flag7 = false;
+            }
+            int collision8 = BlockVsCircle(blockPos8, ballPos);
+            if (flag8 && (collision8 == 1 || collision8 == 2))
+            {
+                ballSpeed.Y *= -1;
+                flag8 = false;
+            }
+            else if (flag8 && (collision8 == 3 || collision8 == 4))
+            {
+                ballSpeed.X *= -1;
+                flag8 = false;
+            }
+            int collision9 = BlockVsCircle(blockPos9, ballPos);
+            if (flag9 && (collision9 == 1 || collision9 == 2))
+            {
+                ballSpeed.Y *= -1;
+                flag9 = false;
+            }
+            else if (flag9 && (collision9 == 3 || collision9 == 4))
+            {
+                ballSpeed.X *= -1;
+                flag9 = false;
             }
 
             // 再描画
@@ -133,9 +237,41 @@ namespace Breakout
             e.Graphics.FillRectangle(grayBrush, paddlePos);
             if (flag1)
             {
-                e.Graphics.FillRectangle(blueBrush, blockPos);
+                e.Graphics.FillRectangle(blueBrush, blockPos1);
             }
-         
+            if (flag2)
+            {
+                e.Graphics.FillRectangle(blueBrush, blockPos2);
+            }
+            if (flag3)
+            {
+                e.Graphics.FillRectangle(blueBrush, blockPos3);
+            }
+            if (flag4)
+            {
+                e.Graphics.FillRectangle(blueBrush, blockPos4);
+            }
+            if (flag5)
+            {
+                e.Graphics.FillRectangle(blueBrush, blockPos5);
+            }
+            if (flag6)
+            {
+                e.Graphics.FillRectangle(blueBrush, blockPos6);
+            }
+            if (flag7)
+            {
+                e.Graphics.FillRectangle(blueBrush, blockPos7);
+            }
+            if (flag8)
+            {
+                e.Graphics.FillRectangle(blueBrush, blockPos8);
+            }
+            if (flag9)
+            {
+                e.Graphics.FillRectangle(blueBrush, blockPos9);
+            }
+
         }
 
         private void KeyPressed(object sender, KeyPressEventArgs e)
