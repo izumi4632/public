@@ -8,3 +8,13 @@ C:\Users\izumi\Desktop\doc\public\myapp\Breakout\obj\Debug\Breakout.csproj.Gener
 C:\Users\izumi\Desktop\doc\public\myapp\Breakout\obj\Debug\Breakout.csproj.CoreCompileInputs.cache
 C:\Users\izumi\Desktop\doc\public\myapp\Breakout\obj\Debug\Breakout.exe
 C:\Users\izumi\Desktop\doc\public\myapp\Breakout\obj\Debug\Breakout.pdb
+C:\Users\izumi\Desktop\doc\エリーちゃんブロック崩し\bin\Debug\Breakout.exe.config
+C:\Users\izumi\Desktop\doc\エリーちゃんブロック崩し\bin\Debug\Breakout.exe
+C:\Users\izumi\Desktop\doc\エリーちゃんブロック崩し\bin\Debug\Breakout.pdb
+C:\Users\izumi\Desktop\doc\エリーちゃんブロック崩し\obj\Debug\Breakout.csprojAssemblyReference.cache
+C:\Users\izumi\Desktop\doc\エリーちゃんブロック崩し\obj\Debug\Breakout.Form1.resources
+C:\Users\izumi\Desktop\doc\エリーちゃんブロック崩し\obj\Debug\Breakout.Properties.Resources.resources
+C:\Users\izumi\Desktop\doc\エリーちゃんブロック崩し\obj\Debug\Breakout.csproj.GenerateResource.cache
+C:\Users\izumi\Desktop\doc\エリーちゃんブロック崩し\obj\Debug\Breakout.csproj.CoreCompileInputs.cache
+C:\Users\izumi\Desktop\doc\エリーちゃんブロック崩し\obj\Debug\Breakout.exe
+C:\Users\izumi\Desktop\doc\エリーちゃんブロック崩し\obj\Debug\Breakout.pdb

@@ -1,0 +1,10 @@
+C:\Users\izumi\Desktop\doc\エリーちゃんブロック崩し\bin\Release\Breakout.exe.config
+C:\Users\izumi\Desktop\doc\エリーちゃんブロック崩し\bin\Release\Breakout.exe
+C:\Users\izumi\Desktop\doc\エリーちゃんブロック崩し\bin\Release\Breakout.pdb
+C:\Users\izumi\Desktop\doc\エリーちゃんブロック崩し\obj\Release\Breakout.csprojAssemblyReference.cache
+C:\Users\izumi\Desktop\doc\エリーちゃんブロック崩し\obj\Release\Breakout.Form1.resources
+C:\Users\izumi\Desktop\doc\エリーちゃんブロック崩し\obj\Release\Breakout.Properties.Resources.resources
+C:\Users\izumi\Desktop\doc\エリーちゃんブロック崩し\obj\Release\Breakout.csproj.GenerateResource.cache
+C:\Users\izumi\Desktop\doc\エリーちゃんブロック崩し\obj\Release\Breakout.csproj.CoreCompileInputs.cache
+C:\Users\izumi\Desktop\doc\エリーちゃんブロック崩し\obj\Release\Breakout.exe
+C:\Users\izumi\Desktop\doc\エリーちゃんブロック崩し\obj\Release\Breakout.pdb
