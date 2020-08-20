@@ -1,4 +1,5 @@
 if isfile("mystdin.txt");mystdin=open("mystdin.txt","r");redirect_stdin(mystdin);end
+macro max!(a,b); esc(:($a=max($a,$b))); end
 function main()
   V=zeros(Int,3010,3010)
   dp=zeros(Int,3010,3010,4)
@@ -11,10 +12,11 @@ function main()
     for j=1:C
       for k=1:4
         #sita
-        @inbounds dp[i+1,j+1,1]=max(dp[i+1,j+1,1],dp[i,j+1,k])
-        @inbounds dp[i+1,j+1,2]=max(dp[i+1,j+1,2],dp[i,j+1,k]+V[i,j])
+        @max!(dp[i+1,j+1,1],dp[i,j+1,k])
+        @max!(dp[i+1,j+1,2],dp[i,j+1,k]+V[i,j])
         #migi
-        @inbounds dp[i+1,j+1,k]=max(dp[i+1,j+1,k],dp[i+1,j,k],k>1 ? dp[i+1,j,k-1]+V[i,j] : 0)
+        @max!(dp[i+1,j+1,k],dp[i+1,j,k])
+        @max!(dp[i+1,j+1,k],k>1 ? dp[i+1,j,k-1]+V[i,j] : 0)
       end
     end
   end

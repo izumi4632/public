@@ -1,12 +1,8 @@
-if isfile("mystdin.txt");mystdin=open("mystdin.txt","r");redirect_stdin(mystdin);end
-function max!(a,b)
-  return a
-end
+macro max!(a,b...); esc(:($a=max($a,$b...))); end
 function main()
   i=2
-  v=[1 2 3 4]
-  max!(i,v)
+  println(i)
+  @max!(i,5,8+2))
   println(i)
 end
 main()
-if isdefined(Base, :mystdin);close(mystdin);end
